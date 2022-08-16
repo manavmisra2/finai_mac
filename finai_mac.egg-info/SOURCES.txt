@@ -1,4 +1,5 @@
 LICENCE.txt
+README.md
 setup.py
 version.py
 finai_mac/__init__.py
