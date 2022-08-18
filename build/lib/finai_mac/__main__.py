@@ -7,12 +7,18 @@ def main():
     print("Running Jupyter platform!") 
     out=site.getsitepackages()
     str_out = out   
-    out1=' '.join(str_out)  
-    filename =  os.path.join(out1, "finai_mac", "jupyter_notebook_config.py")
-    filename2 = filename.replace(os.sep, '/')    
-    os.system("jupyter lab --config=" + filename2)
+    if len(out)==1:
+        out1=' '.join(str_out)  
+        filename =  os.path.join(out1, "finai_mac", "jupyter_notebook_config.py")
+        filename2 = filename.replace(os.sep, '/')    
+        os.system("jupyter lab --config=" + filename2)
+    if len(out)==2:
+        out=site.getsitepackages()
+        str_out = out[1]     
+        filename =  os.path.join(str_out, "finai_mac", "jupyter_notebook_config.py")
+        filename2 = filename.replace(os.sep, '/')    
+        os.system("jupyter lab --config=" + filename2)
    
-
 if __name__ == "__main__":
     main()
 

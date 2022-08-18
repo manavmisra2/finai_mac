@@ -26,7 +26,7 @@ with open(pjoin(here, 'version.py')) as f:
 setup_args = dict(
     name                = 'finai_mac',
     packages            = ['finai_mac'],
-    version             = "3.0",
+    version             = "4.2",
     description         = """REMOTE_USER Authenticator: An Authenticator for Jupyterhub to read user information from HTTP request headers, as when running behind an authenticating proxy.""",
     long_description    = "",
     author              = "Manav (https://github.com/manavmisra2)",
